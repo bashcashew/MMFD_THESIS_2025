@@ -1,0 +1,39 @@
+##'requirements.txt
+
+#' --- Core numerics / dataframe ---
+numpy==2.1.3
+scipy==1.14.1
+pandas==2.2.3
+polars==1.11.0
+pyarrow==17.0.0
+
+#' --- ML ---
+scikit-learn==1.5.2
+imbalanced-learn==0.12.3
+
+#' --- Torch (MPS on Apple Silicon supported) ---
+torch==2.4.1
+
+#' --- HE & Crypto ---
+phe==1.5.0                  # Paillier
+tenseal==0.3.16 ; python_version >= "3.12"
+tenseal==0.3.15 ; python_version < "3.12"
+pyfhel==3.5.0               # CKKS fallback backend
+cryptography==43.0.1        # TLS/mTLS helpers, HMAC utilities
+
+#' --- OPRF / VOPRF (RFC 9497) ---
+oprf==5.0.0                 # main OPRF API
+oblivious==7.0.0            # pure-Python fallback primitives
+rbcl==1.0.1                 # libsodium-backed Ristretto (fast path; universal2 wheel)
+
+#' --- Serialization & utils ---
+joblib==1.4.2
+tqdm==4.66.5
+rich==13.9.2
+PyYAML==6.0.2
+typing-extensions==4.12.2
+pydantic==2.9.2
+
+websockets==12.0
+
+pytest==8.3.3
